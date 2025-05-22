@@ -1,0 +1,22 @@
+@prefix o: <http://ontology.test/> .
+@prefix v: <http://vocabulary.test/> .
+@prefix s: <http://shape.test/> .
+@prefix d: <http://data.test/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+## Vocabulary
+
+v:PartyRoleVocab a skos:ConceptScheme ;
+	 skos:prefLabel "Party Role Vocabulary"@en ;
+     skos:hasTopConcept v:staff, v:customer .
+
+v:staff a o:PartyRole ;
+	 skos:prefLabel "Staff Member"@en .
+
+v:customer a o:PartyRole ;
+	 skos:prefLabel "Customer"@en .
