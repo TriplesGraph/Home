@@ -1,0 +1,21 @@
+@prefix o: <http://ontology.test/> .
+@prefix v: <http://vocabulary.test/> .
+@prefix s: <http://shape.test/> .
+@prefix d: <http://data.test/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+## Shape Rules
+
+s:PartyShape rdf:type shacl:NodeShape ;
+ shacl:targetClass o:Party ;
+ shacl:property [
+    shacl:path o:hasPartyRole ;
+    shacl:class o:PartyRole ;
+    shacl:minCount 1 ;
+    shacl:maxCount 1 ;
+ ] .
